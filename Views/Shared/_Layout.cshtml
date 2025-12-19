@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tatiana Villa</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/css/misestilos.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="bg-dark text-light">
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-sm border-bottom border-secondary">
+            <div class="container-fluid">
+                <a class="navbar-brand font-weight-bold" asp-area="" asp-controller="Home" asp-action="Index" style="font-family: 'Consolas', monospace;">
+                    <span class="text-primary">{</span> TV <span class="text-primary">}</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Habilidades">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-primary ms-lg-3 px-3" asp-controller="Home" asp-action="Contacto">¡Hablamos!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-5">
+
+            <div class="header-presentacion mt-5">
+                <div class="d-flex align-items-center flex-wrap">
+                    <div class="perfil-foto-contenedor me-4 mb-3">
+                        <img src="~/img/foto-perfil.png" alt="Tatiana Villa" class="perfil-foto shadow-lg">
+                    </div>
+
+                    <div class="titulo__header" style="font-family: 'Consolas', 'Monaco', monospace;">
+                        <h1 class="display-5 fw-bold mb-0">
+                            <span class="text-primary">developer</span> TatianaVilla <span class="text-secondary">{</span>
+                        </h1>
+                        <div class="ms-4 my-2">
+                            <h2 class="h4 text-info mb-1">
+                                role: <span class="text-warning">"Full Stack"</span>;
+                            </h2>
+                            <div id="fecha">
+                                <span class="text-success">// Hoy es @DateTime.Now.ToString("dddd',' d 'de' MMMM 'de' yyyy")</span>
+                            </div>
+                        </div>
+                        <h1 class="display-5 fw-bold text-secondary">}</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacto-code-style mt-4" style="font-family: 'Consolas', monospace;">
+                <div class="ms-4">
+                    <p class="mb-1">
+                        <span class="text-primary">using</span> <span class="text-info">Email</span>;
+                        <a href="mailto:tatiana@villaema.es" class="text-warning text-decoration-none">"tatiana@villaema.es"</a>;
+                    </p>
+                    <p class="mb-1">
+                        <span class="text-primary">using</span> <span class="text-info">Social</span>;
+                        <a href="https://github.com/tatvil" target="_blank" class="text-warning text-decoration-none">"github.com/tatvil"</a>,
+                        <a href="https://www.linkedin.com/in/tatvil/" target="_blank" class="text-warning text-decoration-none">"linkedin.com/tatvil"</a>;
+                    </p>
+                </div>
+                <hr class="border-secondary opacity-25 mt-4">
+            </div>
+
+            <div class="mt-5 pt-2 border-start border-primary border-3 ps-4">
+                @RenderBody()
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer mt-auto py-4 border-top border-secondary bg-dark">
+        <div class="container text-center">
+            <small class="text-success" style="font-family: 'Consolas', monospace;">
+                // &copy; 2025 - Portafolio Tatiana Villa - <a asp-controller="Home" asp-action="Privacy" class="text-success">Privacy.cs</a>
+            </small>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/micodigo.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

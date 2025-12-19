@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Habilidades de Tatiana Villa";
+}
+
+@* 1. Quitamos la etiqueta <script> de aquí porque YA la tienes en el Layout *@
+
+<h2 class="text-success mb-4" style="font-family: 'Consolas', monospace;">// Mis Habilidades Técnicas y Blandas</h2>
+
+<section class="section-cv">
+    <button class="section-title" aria-expanded="false">
+        <span><span class="text-primary">public List</span>&lt;string&gt; TechSkills</span>
+        <span class="text-secondary">{ ... }</span>
+    </button>
+
+    <div class="section-content">
+        <div class="skills-list">
+            <div class="skill mb-3">
+                <p class="d-flex justify-content-between mb-1">
+                    <span>Java / PHP / C#</span>
+                    <span class="text-info">85%</span>
+                </p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="skill mb-3">
+                <p class="d-flex justify-content-between mb-1">
+                    <span>HTML / CSS / JS</span>
+                    <span class="text-info">90%</span>
+                </p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill mb-3">
+                <p class="d-flex justify-content-between mb-1">
+                    <span>Unix (HPUX, Linux)</span>
+                    <span class="text-info">90%</span>
+                </p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p class="d-flex justify-content-between mb-1">
+                    <span>Bases de Datos</span>
+                    <span class="text-info">80%</span>
+                </p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-cv">
+    <button class="section-title" aria-expanded="false">
+        <span><span class="text-primary">public List</span>&lt;string&gt; SoftSkills</span>
+        <span class="text-secondary">{ ... }</span>
+    </button>
+
+    <div class="section-content">
+        <ul class="list-unstyled">
+            <li class="mb-2"><b class="text-info">Adaptabilidad:</b> Flexibilidad en nuevos entornos.</li>
+            <li class="mb-2"><b class="text-info">Resolución:</b> Eficiencia ante problemas técnicos.</li>
+            <li class="mb-2"><b class="text-info">Disciplina:</b> Gestión efectiva del tiempo.</li>
+            <li class="mb-2"><b class="text-info">Empatía:</b> Orientación al servicio al cliente.</li>
+        </ul>
+    </div>
+</section>
