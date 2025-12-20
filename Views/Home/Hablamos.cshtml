@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "¡Hablamos!";
+}
+
+<h2 class="text-success mb-4" style="font-family: 'Consolas', monospace;">// Contact_Me</h2>
+
+<div class="section-cv p-4">
+
+    <p class="text-light mb-4" style="font-family: 'Consolas', monospace;">
+        /** <br>
+        * Si quieres hablar conmigo, colaborar en un proyecto, <br>
+        * o simplemente conectar, puedes escribirme aquí: <br>
+        */
+    </p>
+
+    <form asp-action="Contacto" method="post" class="mt-4">
+
+        <div class="mb-3">
+            <label class="form-label text-info">Nombre</label>
+            <input type="text" name="Nombre" class="form-control bg-dark text-light border-secondary" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label text-info">Email</label>
+            <input type="email" name="Email" class="form-control bg-dark text-light border-secondary" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label text-info">Mensaje</label>
+            <textarea name="Mensaje" rows="5" class="form-control bg-dark text-light border-secondary" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary px-4">Enviar</button>
+
+    </form>
+
+    @if (ViewBag.Enviado == true)
+    {
+        <div class="alert alert-success mt-4">
+            ¡Gracias por tu mensaje! Te responderé lo antes posible.
+        </div>
+    }
+
+</div>
+
